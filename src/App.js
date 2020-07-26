@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Menu from './components/Menu';
 
 class App extends Component {
   render() {
@@ -30,6 +31,11 @@ class App extends Component {
                   About
                 </Link>
               </li>
+              <li>
+                <Link to={'/menu'} className="nav-link">
+                  Menu
+                </Link>
+              </li>
             </ul>
           </nav>
           <hr />
@@ -37,6 +43,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
+            <Route path="/menu" component={Menu} />
           </Switch>
         </div>
       </Router>
